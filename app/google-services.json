@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "673230534408",
+    "firebase_url": "https://pdwork-eac5d.firebaseio.com",
+    "project_id": "pdwork-eac5d",
+    "storage_bucket": "pdwork-eac5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:673230534408:android:b0f7c705b9765ecf6adebd",
+        "android_client_info": {
+          "package_name": "sg.edu.rp.c346.a3pdwork"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "673230534408-gktq657pjlvpchlcrgd2gpj7ntotr4g8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWWwLsyvCphRKho8f6-ESuuphzsHjizc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "673230534408-gktq657pjlvpchlcrgd2gpj7ntotr4g8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

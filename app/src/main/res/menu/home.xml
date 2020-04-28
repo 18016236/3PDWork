@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/home"
+    android:title="Home"
+    android:icon="@drawable/ic_action_home"
+    android:enabled="true"
+    />
+<item
+    android:id="@+id/Login"
+    android:title="Login"
+    android:icon="@drawable/ic_action_login"
+    android:enabled="true"
+
+    />
+<item
+    android:id="@+id/About"
+    android:title="Register"
+    android:icon="@drawable/ic_lock_outline_black_24dp"
+    android:enabled="true"
+
+    />
+
+
+</menu>

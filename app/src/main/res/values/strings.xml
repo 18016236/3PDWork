@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">3PDWork</string>
+    <string name="nm">Name</string>
+    <string name="pn">Contact</string>
+    <string name="rr">Rate</string>
+    <string name="rc">Recommendations</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="register">Register</string>
+    <string name="tag">Register with us today \n to provide tutor services!</string>
+    <string name="your_name">Your name</string>
+    <string name="e_mail">Your Email</string>
+    <string name="password">Password</string>
+    <string name="re_type_password">Re-type Password</string>
+</resources>
