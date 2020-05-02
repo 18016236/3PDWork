@@ -1,7 +1,9 @@
 package sg.edu.rp.c346.a3pdwork;
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -28,23 +30,26 @@ import java.util.concurrent.Executor;
  * A simple {@link Fragment} subclass.
  */
 public class AboutFragment extends Fragment {
-    Button SignIn, SignUp;
-    EditText etUserName, etEmail, etPassWord;
+    Button btnSignIn, btnSignUp;
+    EditText etUserName, etEmail, etPassWord,etRePassword;
+    CallbackFragment callbackFragment;
+    String Name, password,email,repassword;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
+
 
 
     @Override
     public View onCreateView(LayoutInflater inflater,  ViewGroup container,
-                              Bundle savedInstanceState) {
+                             Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_about, container, false);
-
+        final View view = inflater.inflate(R.layout.fragment_about, container,false);
 
 
 
         return view;
 
+
     }
 }
-
-

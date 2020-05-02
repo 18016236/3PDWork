@@ -7,28 +7,13 @@ public class Details {
     String speciality;
     String Recommendations;
 
-    public Details(String name, int phoneNum, String rate,String speciality, String Recommendations){
+    public Details(String name, int phoneNum, String rate, String speciality, String recommendations) {
         this.name = name;
         this.phoneNum = phoneNum;
         this.rate = rate;
         this.speciality = speciality;
-        this.Recommendations = Recommendations;
-    }
+        Recommendations = recommendations;
 
-    public String getSpeciality() {
-        return speciality;
-    }
-
-    public void setSpeciality(String speciality) {
-        this.speciality = speciality;
-    }
-
-    public String getRate() {
-        return rate;
-    }
-
-    public void setRate(String rate) {
-        this.rate = rate;
     }
 
     public String getName() {
@@ -47,7 +32,21 @@ public class Details {
         this.phoneNum = phoneNum;
     }
 
+    public String getRate() {
+        return rate;
+    }
 
+    public void setRate(String rate) {
+        this.rate = rate;
+    }
+
+    public String getSpeciality() {
+        return speciality;
+    }
+
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
+    }
 
     public String getRecommendations() {
         return Recommendations;
