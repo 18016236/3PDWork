@@ -32,10 +32,8 @@ import java.util.concurrent.Executor;
 public class AboutFragment extends Fragment {
     Button btnSignIn, btnSignUp;
     EditText etUserName, etEmail, etPassWord,etRePassword;
-    CallbackFragment callbackFragment;
     String Name, password,email,repassword;
-    SharedPreferences sharedPreferences;
-    SharedPreferences.Editor editor;
+
 
 
 

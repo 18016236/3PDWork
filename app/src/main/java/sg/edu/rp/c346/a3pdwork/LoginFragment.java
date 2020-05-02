@@ -36,10 +36,7 @@ import static android.app.Activity.RESULT_OK;
 public class LoginFragment extends Fragment {
     Button btnSignIn, SignUp;
     EditText etUserName, etEmail, etPassWord;
-    CallbackFragment callbackFragment;
     String userName, password,email;
-    SharedPreferences sharedPreferences;
-    SharedPreferences.Editor editor;
 
 
 

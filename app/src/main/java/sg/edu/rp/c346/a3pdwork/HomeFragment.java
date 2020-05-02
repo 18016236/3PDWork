@@ -1,8 +1,11 @@
 package sg.edu.rp.c346.a3pdwork;
 
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -14,65 +17,54 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 
+import java.util.ArrayList;
+
+import static sg.edu.rp.c346.a3pdwork.R.id.listViewDetails;
+
+
 /**
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment {
-
-
-    public HomeFragment() {
-        // Required empty public constructor
-    }
-
+    ListView lvdetails;
+    ArrayAdapter aa;
+    ArrayList<String> detailsList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        String[] menuItems = {"English ", "Math", "Chinese","Biology","Chemistry","Physics","Python","Java","SQL","Swift","Accounting","Additional Math","History","Geography"};
 
-        ListView listView = (ListView) view.findViewById(R.id.listViewDetails);
+        lvdetails = view.findViewById(R.id.listViewDetails);
 
-        ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(
-                getActivity(),
-                android.R.layout.simple_list_item_1,
-                menuItems
-        );
-        listView.setAdapter(listViewAdapter);
+        detailsList = new ArrayList<String>();
+        detailsList.add("English");
+        detailsList.add("Math");
+        detailsList.add("Chinese");
+        detailsList.add("Biology");
+        detailsList.add("Chemistry");
+        detailsList.add("Physics");
+        detailsList.add("Python");
+        detailsList.add("Java");
+        detailsList.add("SQL");
+        detailsList.add("Swift");
+        detailsList.add("Accounting");
+        detailsList.add("Additional Math");
+        detailsList.add("History");
+        detailsList.add("Geography");
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(HomeFragment.this.getContext(),
+                android.R.layout.simple_list_item_1, android.R.id.text1, detailsList);
+        lvdetails.setAdapter(adapter);
+
+
+
+        lvdetails.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 0) {
-                    Toast.makeText(getActivity(),"Hi! This is currently Unavailable", Toast.LENGTH_LONG).show();
-                }else if (position == 1) {
-                    Toast.makeText(getActivity(),"Hi! This is currently Unavailable", Toast.LENGTH_LONG).show();
-                }else if (position == 2) {
-                    Toast.makeText(getActivity(),"Hi! This is currently Unavailable", Toast.LENGTH_LONG).show();
-                }
-                else if (position == 3) {
-                    Toast.makeText(getActivity(),"Hi!  This is currently Unavailable", Toast.LENGTH_LONG).show();
-                }else if (position == 4) {
-                    Toast.makeText(getActivity(),"Hi!  This is currently Unavailable", Toast.LENGTH_LONG).show();
-                }else if (position == 5) {
-                    Toast.makeText(getActivity(),"Hi!  This is currently Unavailable", Toast.LENGTH_LONG).show();
-                }else if (position == 6) {
-                    Toast.makeText(getActivity(),"Hi!  This is currently Unavailable", Toast.LENGTH_LONG).show();
-                }else if (position == 7) {
-                    Toast.makeText(getActivity(),"Hi!  This is currently Unavailable", Toast.LENGTH_LONG).show();
-                }else if (position == 8) {
-                    Toast.makeText(getActivity(),"Hi!  This is currently Unavailable", Toast.LENGTH_LONG).show();
-                }else if (position == 9) {
-                    Toast.makeText(getActivity(),"Hi!  This is currently Unavailable", Toast.LENGTH_LONG).show();
-                }else if (position == 10) {
-                    Toast.makeText(getActivity(),"Hi!  This is currently Unavailable", Toast.LENGTH_LONG).show();
-                }else if (position == 11) {
-                    Toast.makeText(getActivity(),"Hi!  This is currently Unavailable", Toast.LENGTH_LONG).show();
-                }else if (position == 12) {
-                    Toast.makeText(getActivity(),"Hi!  This is currently Unavailable", Toast.LENGTH_LONG).show();
-                }else if (position == 13) {
-                    Toast.makeText(getActivity(),"Hi!  This is currently Unavailable", Toast.LENGTH_LONG).show();
-                }
+                Intent I = new Intent(HomeFragment.this.getActivity(),rowActivity.class);
+                I.putExtra("number",position);
+                startActivity(I);
 
             }
         });
@@ -80,6 +72,7 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         return view;
     }
+
 
 
 }
