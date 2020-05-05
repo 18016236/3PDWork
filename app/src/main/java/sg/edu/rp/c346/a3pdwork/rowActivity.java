@@ -1,5 +1,6 @@
 package sg.edu.rp.c346.a3pdwork;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,7 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
 
@@ -148,10 +151,14 @@ public class rowActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Details selected = courses.get(position);
 
-                Toast.makeText(rowActivity.this,"You have selected: "+ selected.getName()
-                                + " Contact: " + selected.getPhoneNum() + " Rate: " + selected.getRate() + " Speciality: " + selected.getSpeciality() +" Recommendations: " + selected.getRecommendations(),
-                        Toast.LENGTH_LONG).show();
-            }
-        });
-    }
-}
+                Intent I = new Intent(rowActivity.this, profileActivity.class);
+                I.putExtra("number", id);
+                startActivity(I);
+
+
+
+
+
+        };
+    });
+}}

@@ -5,6 +5,7 @@
     <string name="ss">Speciality</string>
     <string name="rr">Rate</string>
     <string name="rc">Recommendations</string>
+    <string name="send">SEND SMS</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="register">Register</string>
