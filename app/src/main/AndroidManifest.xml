@@ -4,10 +4,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.SEND_SMS"/>
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
-    <uses-permission android:name="android.permission.READ_SMS"/>
-
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
 
     <application
         android:allowBackup="true"
@@ -16,8 +15,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".profileActivity"></activity>
-        <activity android:name=".rowActivity"></activity>
+        <activity android:name=".LanguagesTutorActivity"></activity>
+        <activity android:name=".FinancesTutorActivity"></activity>
+        <activity android:name=".HumanitiesTutorActivity"></activity>
+        <activity android:name=".ProgrammingTutorsActivity"></activity>
+        <activity android:name=".MathTutorsActivity"></activity>
+        <activity android:name=".SciencesTutorActivity"></activity>
+        <activity android:name=".HumanitiesActivity"></activity>
+        <activity android:name=".ProgrammingActivity" />
+        <activity android:name=".FinancesActivity" />
+        <activity android:name=".SciencesActivity" />
+        <activity android:name=".MathActivity" />
+        <activity android:name=".details_layout" />
+        <activity android:name=".profileActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">

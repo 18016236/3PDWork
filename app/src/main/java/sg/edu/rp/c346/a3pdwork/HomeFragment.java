@@ -38,20 +38,13 @@ public class HomeFragment extends Fragment {
         lvdetails = view.findViewById(R.id.listViewDetails);
 
         detailsList = new ArrayList<String>();
-        detailsList.add("English");
+        detailsList.add("Languages");
         detailsList.add("Math");
-        detailsList.add("Chinese");
-        detailsList.add("Biology");
-        detailsList.add("Chemistry");
-        detailsList.add("Physics");
-        detailsList.add("Python");
-        detailsList.add("Java");
-        detailsList.add("SQL");
-        detailsList.add("Swift");
-        detailsList.add("Accounting");
-        detailsList.add("Additional Math");
-        detailsList.add("History");
-        detailsList.add("Geography");
+        detailsList.add("Sciences");
+        detailsList.add("Finance");
+        detailsList.add("Programming");
+        detailsList.add("Humanities");
+
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(HomeFragment.this.getContext(),
                 android.R.layout.simple_list_item_1, android.R.id.text1, detailsList);
@@ -62,10 +55,31 @@ public class HomeFragment extends Fragment {
         lvdetails.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent I = new Intent(HomeFragment.this.getActivity(),rowActivity.class);
-                I.putExtra("number",position);
+                if(position == 0) {
+                    Intent I = new Intent(HomeFragment.this.getActivity(), details_layout.class);
+                    I.putExtra("number", position);
+                    startActivity(I);
+                } else if (position == 1){
+                    Intent I = new Intent(HomeFragment.this.getActivity(), MathActivity.class);
+                    I.putExtra("maths", position);
+                    startActivity(I);
+                }else if (position == 2) {
+                    Intent I = new Intent(HomeFragment.this.getActivity(), SciencesActivity.class);
+                    I.putExtra("sciences", position);
+                    startActivity(I);
+                }else if (position == 3) {
+                    Intent I = new Intent(HomeFragment.this.getActivity(), FinancesActivity.class);
+                    I.putExtra("finances", position);
+                    startActivity(I);
+                }else if (position == 4) {
+                Intent I = new Intent(HomeFragment.this.getActivity(), ProgrammingActivity.class);
+                I.putExtra("programming", position);
                 startActivity(I);
-
+            }  else if (position == 5) {
+                Intent I = new Intent(HomeFragment.this.getActivity(), HumanitiesActivity.class);
+                I.putExtra("humanities", position);
+                startActivity(I);
+            }
             }
         });
 
